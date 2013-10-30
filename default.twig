@@ -1,0 +1,40 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-default">
+
+ <header>
+   <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+            {{widget('extendednavigation', 'navigationheader', {})|raw}}          
+    </div>
+</header>
+
+<div class="canvas">
+
+<div class="inner-bg">
+
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>  
+
+</div>
+
+</div>
+
+<footer>
+    <div class="wrapper clearfix">
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}           
+        {{widget('profile', 'footercolumn1address', { 'profileType':'address', 'address':'profile'})|raw}}
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+    </div>
+</footer>
+
+</div>
+
+
+{% endblock %}

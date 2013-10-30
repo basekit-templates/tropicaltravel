@@ -1,0 +1,67 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+
+ <header>
+   <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+
+</header>
+
+<section class="wrapper">
+    <div class="responsivecolumns columns-two-66-34">
+        <div class="column columns-two-left">
+
+            {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"MAURIS ERAT","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+
+        </div>
+        <div class="column columns-two-right">
+            <div class="feature-image-block1">
+                <div class="color-block yellow">
+                    <span>{{widget('content', 'content', {content: '<h2>This is a content widget.</h2>', lines: 'all'})|raw}}</span>
+                </div>
+            </div>
+            <div class="feature-image-block2">
+                <div class="color-block blue">
+                    <span>{{widget('content', 'content', {content: '<h2>This is a content widget.</h2>', lines: 'all'})|raw}}</span>
+                </div>
+            </div>
+
+        </div>
+</section>
+
+<div class="main wrapper clearfix">
+{{zone('main')|raw}}
+<h1>Home</h1>
+<h2>Test</h2>
+<h3>Test</h3>
+<h4>Test</h4>
+
+<ul>
+    <li>Test</li>
+</ul>
+
+<blockquote>Hello i am the best</blockquote>
+</div>  
+
+<footer class="wrapper">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+            {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">           
+            {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+    </div>
+</footer>
+
+
+
+{% endblock %}
