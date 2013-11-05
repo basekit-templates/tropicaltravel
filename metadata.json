@@ -128,7 +128,7 @@
         },
         "font9": {
             "font-family": "Lato",
-            "font-size": "28px",
+            "font-size": "24px",
             "font-weight": "200",
             "line-height": "48px",
             "color": "@color-swatch1",

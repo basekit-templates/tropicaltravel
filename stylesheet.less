@@ -202,7 +202,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   text-align:center;
 }
 
-
 /* ===============================
    HEADER
    =============================== */
@@ -928,12 +927,12 @@ hr.line.align-right {
 
 .widget.clicktocall a {
     padding: 10px 0;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
+    font-family: @font-swatch4-font-family;
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
     text-decoration: none;
 }
 
@@ -1714,12 +1713,11 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     width: 100%;
     display: none;
     margin: 0;
-    border-top: 1px dashed lighten(@color-swatch5,55%);
   }
 
   .widget.extendednavigation ul li {
-    border-bottom: 1px dashed lighten(@color-swatch5,55%);
     padding: 16px 0;
+    text-align:center;
   }
 
    .widget.extendednavigation ul li:last-child {
@@ -1744,7 +1742,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
   }
 
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 5px 0;
+      padding: 0px 0px;
       margin: 0;
   }
 
@@ -1760,8 +1758,8 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
   }
 
   .widget.extendednavigation ul li:hover > ul > li {
-    border-top: 1px dashed lighten(@color-swatch5,55%);
     padding: 16px 0;
+    text-align:center;
   }
 
   .widget.extendednavigation ul li:hover > ul > li .text {
@@ -1841,30 +1839,28 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
         font-size: bkscale(@font-swatch9-font-size,0.9);
     }
 
-    .columns-two-66-34 .columns-two-left {
-      margin-right: 0!important;
+    .feature-columns .columns-two-66-34 .columns-two-left {
+      width: 100%;
       margin-bottom: 20px!important;
     }
 
-    .columns-two-66-34 .columns-two-right {
+    .feature-columns .columns-two-66-34 .columns-two-right {
+      width: 100%;
       margin-left: 0!important;
-    }
-
-    .feature-image-left {
-      float: left;
-      width: 48.5%;
-      margin-right: 1.5%;
-    }
-
-    .feature-image-right {
-      float: left;
-      width: 48.5%;
-      margin-left: 1.5%;
     }
 
     .yellow-block {
       margin-top: 0;
       height:193px;
+    }
+
+    /* NAV */
+
+    .widget.extendednavigation ul li a:hover {
+        text-decoration: none;
+        border-bottom:0;
+        margin-bottom:0;
+        padding-bottom:0;
     }
 
      /* GALLERY */
@@ -1911,14 +1907,36 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     /* FEATURE IMAGES */
 
     .blue-block{
-      height: 194px;
-      margin-top: 0;
-      }
+        height: 194px;
+        margin-top: 0;
+    }
 
-      .color-block h2 {
-        font-size: bkscale(@font-swatch8-font-size,0.5);
+    .color-block h2 {
+        font-size: bkscale(@font-swatch8-font-size,0.4);
         line-height: bkscale(@font-swatch8-line-height,0.7);
-      }
+    }
+
+    .feature-image-block1,
+    .feature-image-block2 {
+        width: 100%;
+    }
+
+    .color-block{
+        height:158px;
+    }
+
+    .feature-image-block1{
+        margin-bottom:20px;
+    }
+
+    /* NAV */
+
+    .widget.extendednavigation ul li a:hover {
+        text-decoration: none;
+        border-bottom:0;
+        margin-bottom:0;
+        padding-bottom:0;
+    }
 
 
     /* FEATURE */
@@ -1977,6 +1995,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 
 
+
   /* CLICK TO CALL */
 
   .widget.clicktocall {
@@ -1985,7 +2004,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 .widget.clicktocall a {
   background-image: image('/images/ic-desktop-call.png');
-  background-color: @font-swatch7-background-color;
+  background-color: @color-swatch3;
   background-position: 20px center;
   background-repeat:no-repeat;
   padding: 20px 20px 20px 47px;
@@ -1994,14 +2013,13 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
+  color: @font-swatch1-color;
   text-decoration: none;
   letter-spacing: @font-swatch7-letter-spacing;
 }
 
 .widget.clicktocall a:hover {
-  background-color: @font-swatch7-background-color-hover;
+  background-color: darken(@color-swatch3,5%);
   cursor: pointer;
   text-decoration: none;
   }
@@ -2067,7 +2085,12 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 }
 
-
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
 
 .clearfix:before,
 .clearfix:after {

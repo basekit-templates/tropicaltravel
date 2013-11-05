@@ -10,27 +10,23 @@
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}          
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
+
 </header>
 
-<div class="canvas">
-
-<div class="inner-bg">
-
 <div class="main wrapper clearfix">
-    {{zone('main')|raw}}
+{{zone('main')|raw}}
 </div>  
 
-</div>
-
-</div>
-
-<footer>
-    <div class="wrapper clearfix">
-        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}           
-        {{widget('profile', 'footercolumn1address', { 'profileType':'address', 'address':'profile'})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+<footer class="wrapper">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+            {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">           
+            {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
     </div>
 </footer>
 
