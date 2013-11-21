@@ -556,26 +556,24 @@ footer h4 {
 }
 
 .widget.feature button {
-  padding: 20px 4px;
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  font-size: @font-swatch7-font-size;
-  letter-spacing: @font-swatch7-letter-spacing;
-  background-color: @font-swatch7-background-color; 
-  color: @font-swatch7-color;
-  text-decoration: none;
-  border: none;
-  display:none;
+    padding: 15px 30px;
+    margin: 0;
+    border: none;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @color-swatch6;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .widget.feature .feature-btn .btnText {
-padding: 15px 25px;
-border: 1px dashed @color-swatch1;
-display:none;
 }
 
 .widget.feature button:hover {
-  background-color: @font-swatch7-background-color-hover; 
+  background-color: lighten(@color-swatch6,5%);
+  color: @font-swatch7-color;
   cursor: pointer;
 }
 
@@ -737,7 +735,7 @@ display:none;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
   background-color: @color-swatch6;
-  color: @color-swatch1;
+  color: @font-swatch7-color;
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -1107,7 +1105,6 @@ hr.line.align-right {
 .widget.contactform fieldset button.btn:hover {
   background-color: lighten(@color-swatch6,5%);
   color: @font-swatch7-color;
-  background-image: image('/images/button-black-arrow.svg');
   cursor: pointer;
 }
 
@@ -1207,7 +1204,7 @@ hr.line.align-right {
 
 .widget.tweet a:hover, .tweet a:active {
   cursor: pointer;
-  background-color: @font-swatch7-background-color-hover;
+  background-color: lighten(@color-swatch4,5%);
 }
 
 /* ==================================

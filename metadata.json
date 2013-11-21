@@ -115,8 +115,8 @@
             "line-height": "25px",
             "color": "@color-swatch1",
             "letter-spacing": "1px",
-            "background-color": "darken(@color-swatch1,20%)",
-            "background-color-hover": "darken(@color-swatch1,30%)"
+            "background-color": "@color-swatch4",
+            "background-color-hover": "lighten(@color-swatch4,5%)"
         },
         "font8": {
             "font-family": "Lato",
