@@ -2,8 +2,7 @@
    IMPORT CSS
    =============================== */
 
-@import "@{templateCommon}/paypal.less";
-@import "@{templateCommon}/dropbox.less";
+@import "@{templateCommon}/basekit-bootstrap.less";
 
 /* ===============================
    TEMPLATE CSS
@@ -171,6 +170,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   border-top: none;
 }
 
+.widget .extendednavigation ul li:hover ul {
+  background-color: @color-swatch3;
+}
+
 /* YELLOW BLOCK */
 
 .feature-image-block1 {
@@ -275,6 +278,8 @@ footer {
     text-align: center;
     margin:0 auto;
     border-top:1px solid lighten(@color-swatch5, 20%);
+    background-color:transparent;
+    min-height:inherit;
 }
 
 footer h1,
@@ -510,6 +515,10 @@ footer h4 {
 .widget.feature .feature-bgimg {
   width: 100%;
   height: 450px;
+}
+
+.widget.feature .feature-bgimg .content {
+  height:450px;
 }
 
  .widget.feature .content {
@@ -1084,6 +1093,14 @@ hr.line.align-right {
     border:0;
 }
 
+.widget.contactform form fieldset input {
+  border:0;
+}
+
+.widget.contactform form fieldset textarea {
+  border:0;
+}
+
 .widget.contactform fieldset textarea:focus {
     outline: none;
     box-shadow: 0 0 3px lighten(@color-swatch5,50%);
@@ -1232,8 +1249,6 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 15px 17px 17px 65px;
-  background-image: image('/images/social/twitter.png');
   background-repeat: no-repeat;
   margin: 2.2em auto;
   border: 0;
@@ -1241,7 +1256,6 @@ hr.line.align-right {
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
   background-color: @color-swatch4;
-  color: @font-swatch10-color;
   text-decoration: none;
   letter-spacing: @font-swatch7-letter-spacing;
 }
@@ -1561,7 +1575,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 }
 
 .widget.signupform fieldset input {
-    height: 40px;
+    height: 48px;
     background-color: @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
@@ -1581,7 +1595,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 .widget.signupform fieldset button.btn {
     padding: 11px 22px;
-    margin: 7px -3px;
+    margin: 6px -3px;
     border: none;
     background-color: @font-swatch7-background-color;
     font-family: @font-swatch7-font-family;
