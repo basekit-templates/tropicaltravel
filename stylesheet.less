@@ -172,6 +172,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .widget .extendednavigation ul li:hover ul {
   background-color: @color-swatch3;
+  margin-top:10px;
 }
 
 /* YELLOW BLOCK */
@@ -222,12 +223,15 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   text-align:center;
 }
 
+.widget .extendednavigation ul li.folder .text:after {
+  display:none;
+}
+
 /* ===============================
    HEADER
    =============================== */
 
 header {
-    margin: 20px 0 20px;
     background-color: @color-swatch1;
 }
 
@@ -433,7 +437,8 @@ footer h4 {
   display: block;
   position: absolute;
   z-index: 500;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left:10px;
 }
 
 .widget.extendednavigation li:hover > ul > li {
@@ -467,6 +472,10 @@ footer h4 {
 
 .widget.extendednavigation li:hover > ul > li > a .text {
   margin-left: 0;
+}
+
+.widget .extendednavigation ul li.folder ul li a .text {
+  padding:0px 20px;
 }
 
 /* EXTENDED NAVIGATION - INSIDE ZONE */
@@ -1775,15 +1784,15 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     .widget.extendednavigation {
         display: block;
         width: 100%;
+        min-height:0;;
     }
 
      /* NAV ICON */
 
   .widget .extendednavigation a.pull {
     display: block;
-    width: 100%;
     position: absolute;
-    top: 6px;
+    top: -62px;
   }
 
     .widget .extendednavigation a.pull:after {
@@ -1795,7 +1804,11 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     display: inline-block;
     position: absolute;
     right: 0;
-    top: -48px;
+    box-shadow:none;
+  }
+
+  .widget .extendednavigation {
+    min-height:0px;
   }
 
   /* NAV */
@@ -2030,6 +2043,10 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
         padding-bottom:0;
     }
 
+    .widget .extendednavigation ul li {
+      border-bottom:none;
+    }
+
         /* DEFAULT PAGE TYPE */
 
   .bk-pt-default header {
@@ -2057,15 +2074,15 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
       padding: 15px 0;
     }
 
-    .widget.feature h2 {
+    .widget.feature .feature-bgimg .content h2 {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.8);
         padding: 0 5% 5px;
     }
 
-    .widget.feature h3 {
+    .widget.feature .feature-bgimg .content h3 {
         font-size: bkscale(@font-swatch9-font-size,0.8);
-        line-height: bkscale(@font-swatch9-line-height,0.8);
+        line-height: bkscale(@font-swatch9-line-height,0.6);
         padding: 0 5%;
     }
 
