@@ -4,7 +4,7 @@
 
 <div class="bk-pt-default">
 
- <header class="wrapper clearfix">
+ <header class="bk-header wrapper clearfix">
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
@@ -17,7 +17,7 @@
 {{zone('main')|raw}}
 </div>  
 
-<footer class="wrapper">
+<footer class="bk-footer wrapper">
         <div class="responsivecolumns columns-two-50-50">
             <div class="column columns-two-left">
             {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
