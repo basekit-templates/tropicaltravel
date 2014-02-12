@@ -389,15 +389,17 @@ footer h4 {
 
 .widget.extendednavigation ul li.folder {
   display: block;
-  background-image: image('/images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   padding-right: 10px;
   cursor: pointer;
+  &:after {
+    right: 10px;
+    top: 50%;
+  }
 }
 
 .widget.extendednavigation ul li.folder:hover {
-  background-image: image('/images/arrow-down-hov.png');
   color: @font-swatch6-color;
 }
 
@@ -975,7 +977,6 @@ hr.line.align-right {
 
 .widget.clicktocall a:hover {
     cursor: pointer;
-    padding:20px 20px 20px 47px;
     background-position: 20px center;
 }
 
@@ -1515,7 +1516,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 }
 
 .widget.profile fieldset button.btn {
-    padding: 11px 11px;
+    padding: 8px 11px 9px;
     margin: 0;
     border: none;
     font-family: @font-swatch7-font-family;
@@ -1526,8 +1527,9 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     text-decoration: none;
     letter-spacing: 1px;
     float:left;
-    margin-top:7px;
+    margin-top: 6px;
     margin-left:-2px;
+    line-height: 25px;
 }
 
 .widget.profile fieldset button.btn:hover {
@@ -1560,7 +1562,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
    =============================== */
 
 .widget.map {
-  border: 1px solid #dddddd;
+  border: 1px solid darken(@color-swatch1, 10%);
 }
 
 /* ===============================
@@ -1589,7 +1591,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.signupform fieldset input {
+.widget.signupform fieldset input, .blog-search-form input {
     height: 48px;
     background-color: @color-swatch3;
     font-family: @font-swatch5-font-family;
@@ -1608,9 +1610,9 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     box-shadow: 0 0 3px lighten(@color-swatch5,50%);
 }
 
-.widget.signupform fieldset button.btn {
-    padding: 11px 22px;
-    margin: 6px -3px;
+.widget.signupform fieldset button.btn, .blog-search-submit-button {
+    padding: 10px 22px;
+	margin: 6px 0px;
     border: none;
     background-color: @font-swatch7-background-color;
     font-family: @font-swatch7-font-family;
@@ -1625,6 +1627,10 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 .widget.signupform fieldset button.btn:hover {
     background-color: lighten(@color-swatch6,5%);
     cursor: pointer;
+}
+
+.blog-search-form label {
+	display: block;
 }
 
 /* ===============================
@@ -1735,7 +1741,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
   height: 8px;
   line-height: 14px;
   display: inline-block;
-  background-color: lighten(@color-swatch3,50%);
+  background-color: darken(@color-swatch1,20%);
   cursor: pointer;
 }
 
