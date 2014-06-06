@@ -339,10 +339,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation ul li.folder {
-  display: block;
   background-position: right center;
   background-repeat: no-repeat;
-  padding-right: 10px;
   cursor: pointer;
   &:after {
     right: 10px;
@@ -380,7 +378,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation ul li.folder {
-  padding-right: 8px;
   height: 100%;
   cursor: pointer;
 }
@@ -396,6 +393,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   z-index: 500;
   margin-top: 10px;
   margin-left:10px;
+  right: 0;
 }
 
 .widget.extendednavigation li:hover > ul > li {
@@ -2118,7 +2116,7 @@ hr.line.align-right {
   }
 
   .widget.extendednavigation ul li {
-    padding: 16px 0;
+    padding: 16px 30px;
     text-align:center;
   }
 
@@ -2132,10 +2130,6 @@ hr.line.align-right {
 
   .widget.extendednavigation ul li:hover .text {
     color: @font-swatch6-color-hover;
-  }
-
-  .widget.extendednavigation ul li.folder {
-    padding: 16px 0;
   }
 
   .widget .extendednavigation li {
