@@ -935,18 +935,18 @@ hr.line.align-right {
 }
 
 /* ===============================
-   TWITTER WIDGET
+   TWITTER FULL
    =============================== */
 
-
 .widget.twitter {
-  padding: 30px;
-  margin: 0;
-  background-color: @color-swatch1;
-  border: 1px solid darken(@color-swatch1,10%);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  padding: 0px;
+  list-style: none;
+  background-image: image('/images/twitterlogo.png');
+  background-repeat:no-repeat;
+  background-color:@color-swatch6;
+  background-position: 50% 20px;
+  padding-top:80px;
+  margin-top:20px;
 }
 
 .twitter div.twitter-profile-pic a,
@@ -963,14 +963,14 @@ div.twitter-profile-pic {
 .widget.twitter a {
    color: @color-swatch4;
    text-decoration: none;
-   border-bottom: 2px solid @color-swatch3;
+   border-bottom: 2px solid @color-swatch4;
    padding-bottom: 4px;
 }
 
 .widget.twitter span a {
   border-bottom: 0;
   font-size: 11px;
-  color: @color-swatch3;
+  color: @font-swatch4-color
 }
 
 .widget.twitter a:hover {
@@ -980,6 +980,8 @@ div.twitter-profile-pic {
 .widget.twitter ul {
     padding: 0px;
     margin: 0;
+    background-color: @color-swatch3;
+    padding: 20px;
 }
 
 .widget.twitter ul li {
@@ -1007,12 +1009,7 @@ div.twitter-profile-pic {
 
 .widget.twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch4-font-family;
-    color: @color-swatch3;
-}
-
-.twitter div.twitter-profile-pic a,
-div.twitter-profile-pic {
-  line-height: 0;
+    color: @font-swatch4-color
 }
 
 
