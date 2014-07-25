@@ -2,23 +2,19 @@
 
 {% block content %}
 
-
-
  <header class="bk-header wrapper clearfix">
-        <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    <div class="companyheader clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-    </div>
+     </div>
 </header>
 
 <section class="bk-section wrapper">
     <div class="feature-columns">
         <div class="responsivecolumns columns-two-66-34">
             <div class="column columns-two-left">
-
                 {{widget('feature', 'thisunqiuewidgetname', {"header": "CREATIVE IDEAS. COMMON RESULTS.", "strapline":"profile", "buttonText":"MAURIS ERAT","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-
             </div>
             <div class="column columns-two-right">
                 <div class="feature-image-block1">
@@ -31,24 +27,23 @@
                         <span>{{widget('content', 'textwidgetbox2', {content: '<h2>Lorem ipsum dolor sit amet.</h2>', lines: 'all'})|raw}}</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
 
 <div class="main wrapper clearfix">
-{{zone('main')|raw}}
+    {{zone('main')|raw}}
 </div>  
 
 <footer class="bk-footer wrapper">
-        <div class="responsivecolumns columns-two-50-50">
-            <div class="column columns-two-left">
+    <div class="responsivecolumns columns-two-50-50">
+        <div class="column columns-two-left">
             {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
-            </div>
-            <div class="column columns-two-right">           
+        </div>
+        <div class="column columns-two-right">           
             {{widget('profile', 'footercolumn1socialicons', { 'profileType' : 'socialicons' })|raw}}
-            </div>
+        </div>
     </div>
 </footer>
 
