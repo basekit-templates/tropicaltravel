@@ -165,6 +165,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .companyheader {
     display: block;
     padding: 0;
+    width: 30%;
+    float: left;
 }
 
 /* COMPANY NAME */
@@ -261,7 +263,7 @@ footer.bk-footer {
   float: right;
   position: relative;
   background-color: transparent;
-  width: 80%;
+  width: 70%;
 }
 
 .widget.extendednavigation a.pull {
@@ -2050,6 +2052,10 @@ input, textarea {
     padding: 0;
   }
 
+  .widget .extendednavigation ul li:hover ul {
+    margin-top:0;
+  }
+
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
       padding: 0px 0px;
       margin: 0;
@@ -2066,7 +2072,11 @@ input, textarea {
   }
 
   .widget.extendednavigation ul li:hover > ul > li {
-    padding: 16px 0;
+    padding:0;
+  }
+
+  .widget.extendednavigation li:hover > ul > li > a {
+    padding:8px 0px;
   }
 
   .widget.extendednavigation ul li:hover > ul > li .text {
