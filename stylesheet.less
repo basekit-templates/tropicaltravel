@@ -143,19 +143,14 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   padding:20px;
 }
 
-.color-block h2 {
-  font-family:@font-swatch9-font-family;
-  font-size: @font-swatch9-font-size;
-  font-weight: @font-swatch9-font-weight;
-  line-height:@font-swatch2-line-height;
-  color: @color-swatch1;
-  letter-spacing: @font-swatch9-letter-spacing;
-  padding-bottom: 0;
-  text-align:center;
-}
-
 .widget .extendednavigation ul li.folder .text:after {
   display:none;
+}
+
+.color-block h1, .color-block h2, .color-block h3, .color-block h4, .color-block h5, .color-block p {
+  color:@font-swatch7-color;
+  padding-bottom: 0;
+  text-align:center;
 }
 
 /* ===============================
@@ -2067,7 +2062,6 @@ input, textarea {
   .widget.extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      margin: 16px 0;
       padding: 0;
   }
 
@@ -2176,12 +2170,12 @@ input, textarea {
       border-bottom:none;
     }
 
-    .widget.extendednavigation ul li , .widget.extendednavigation ul li.folder .text {
-      padding: 10px 0px;
-    }
-
     .widget.extendednavigation ul li.folder:after {
         right: -15px;
+    }
+
+     .widget.extendednavigation ul li, .widget.extendednavigation ul li.folder .text {
+      padding:0;
     }
 
      /* GALLERY */
@@ -2272,6 +2266,10 @@ input, textarea {
         border-bottom:0;
         margin-bottom:0;
         padding-bottom:0;
+    }
+
+    .widget.extendednavigation ul li, .widget.extendednavigation ul li.folder .text {
+      padding:0;
     }
 
         /* DEFAULT PAGE TYPE */
