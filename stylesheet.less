@@ -391,6 +391,18 @@ footer.bk-footer h4 {
   padding:0px 20px;
 }
 
+.extendednavigation li.selected {
+    a {
+        text-decoration: none;
+        border-bottom: 3px solid #feb934;
+        margin-bottom: -10px;
+        padding-bottom: 6px!important;    }
+}
+
+.widget .extendednavigation ul li:hover ul {
+  margin-top:0;
+}
+
 /* EXTENDED NAVIGATION - INSIDE ZONE */
 
 .main .widget.extendednavigation {
@@ -1977,7 +1989,7 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
 }
 
 header.bk-header {
-  padding:20px 0px 0px;
+  padding:20px 0px;
 }
 
 
@@ -2024,6 +2036,12 @@ header.bk-header {
 
   .widget .extendednavigation {
     min-height:0px;
+  }
+
+  .extendednavigation li.selected {
+    a {
+        border:0;
+        padding-bottom: 0px!important;    }
   }
 
   /* NAV */
