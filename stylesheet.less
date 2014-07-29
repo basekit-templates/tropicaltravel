@@ -788,6 +788,10 @@ hr.line.align-right {
     bottom: 0;
 }
 
+.widget.gallery ul li span.inner .title, .widget.gallery ul li span.inner .description {
+  color:@font-swatch7-color;
+}
+
 /* Lightbox */
 
 .lb-data .lb-caption, .lb-data .lb-number {
@@ -1737,7 +1741,7 @@ select::-ms-expand {
 
 
 .widget.profile span,
-.widget.profile a, .widget.profile p {
+.widget.profile a {
     display: block;
     font-size: @font-swatch5-font-size;
     font-family: @font-swatch5-font-family;
@@ -1745,6 +1749,14 @@ select::-ms-expand {
     line-height: @font-swatch5-line-height;
     font-weight: @font-swatch5-font-weight;
     float:left;
+}
+
+.widget.profile .bk-profile-strapline {
+  text-align:left;
+}
+
+.widget.profile .bk-profile-address {
+  text-align:left;
 }
 
 .widget.profile a:hover {
