@@ -676,118 +676,54 @@ hr.line.align-right {
     margin: 20px 0px 20px auto
 }
 
-/* ===============================
-   GALLERY WIDGET
-   =============================== */
+// -----------------------------
+// Gallery
+// -----------------------------
 
-.widget.gallery
-{
-}
-
-.widget.gallery ul {
-    display:block;
-    margin: 0;
-    padding:0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-    list-style-type: none;
-}
-
-.widget.gallery li  span.inner {
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner
-{
-    background-size:100% 100%;
-}
-
-.widget.gallery ul li.portrait span.inner
-{
-    background-size:100% auto;
-}
-
-.widget.gallery ul li.landscape span.inner
-{
-    background-size:auto 100%;
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display:none;
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-  content: " ";
-  display: table;
-}
-.widget.gallery ul:after {
-  clear: both;
-}
-.widget.gallery ul {
-  *zoom: 1;
-}
-
-.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: -310px;
-    max-height: 284px;
-    background-color: @color-swatch1;
-    padding: 10px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:darken(@font-swatch5-color,40%);
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-.widget.gallery li span.inner:hover .title {
-   margin-bottom: 0;
-}
-
-.widget.gallery li span.inner .description {
-  display: none;
-}
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.widget.gallery ul li span.inner .title, .widget.gallery ul li span.inner .description {
-  color:@font-swatch7-color;
+.widget.gallery {
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                color: @color-swatch1;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            .description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: @color-swatch7;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 /* Lightbox */
@@ -1640,6 +1576,10 @@ select::-ms-expand {
 
 .checkout-empty-link.btn {
   background-color:@color-swatch4;
+}
+
+.widget.ecomproductslist label {
+  display:block;
 }
 
 /* ===============================
