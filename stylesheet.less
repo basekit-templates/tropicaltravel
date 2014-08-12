@@ -1593,32 +1593,60 @@ select::-ms-expand {
 
 // Ecom Basket Summary
 
-.ecombasketsummary a, .ecombasket .ecombasket-pull p {
+.ecombasketsummary a {
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight: @font-swatch7-font-weight;
-  color: @font-swatch1-color;
-  &:hover {
-    text-decoration: none;
-  }
+}
+
+.basket-summary-product-info a {
+  font-family: @font-swatch6-font-family;
+  font-size: @font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+}
+
+.ecombasket .ecombasket-pull p {
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
 }
 
 .widget.ecombasketsummary {
+  padding-top:20px;
   table {
-    background-color: transparent;
     border-spacing: 0;
     width: 100%;
-    border-bottom: none;
     list-style: none;
     font-size: 18px;
     color: @color-swatch4;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin: 20px 0 30px;
+    @media @tablet {
+      padding: 0px;
+    }
     @media @mobile {
-      padding: 10px;
+      padding: 0px;
+      margin:0px 0px 30px 0px;
     }
     tr:first-child { 
+          outline: 1px solid darken(@color-swatch1,10%);
+            background-color: darken(@color-swatch1,4%);
+            -webkit-border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            font-family: @font-swatch4-font-family;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: @font-swatch4-color;
+            text-transform: uppercase;
+            @media @mobile {
+                font-size: 12px;
+                display: none!important;
+            }
       @media @mobile {
+        font-size: 12px;
           display: table-header-group;
           th:nth-child(2) {
             display: none;
@@ -1630,18 +1658,78 @@ select::-ms-expand {
     }
     th {
       text-align: left;
+      position: relative;
+      left: 20px;
     }
+            tr td {
+            border-bottom: 1px solid darken(@color-swatch1,10%);
+            @media (max-width: 360px) {
+                display: table;
+                width: 100%;
+                border-bottom: 0;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                padding: 20px;
+                vertical-align: top;
+                @media @mobile {
+                  padding:20px 0px;
+                }
+            }
+            &:nth-child(2) {
+                @media (max-width: 530px) {
+                    padding-left: 0;
+                }
+            }
+            &:nth-child(3) {
+                padding: 20px;
+                margin-top:0;
+            }
+            // Responsive
+            &:nth-child(1) {
+                @media (max-width: 360px) {
+                    padding-bottom: 0;
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                @media (max-width: 360px) {
+                    padding: 0 20px 0;
+                    border-left: 0;
+                }
+            }
+            &:last-child {
+                @media (max-width: 360px) {
+                    padding: 6px 20px;
+                    margin: 20px 0 0;
+                    border-bottom: 1px solid darken(@color-swatch1,10%);
+                    border-top: 1px solid darken(@color-swatch1,10%);
+                }
+            }
+        }
+        tr:last-child td:last-child {
+            @media (max-width: 360px) {
+                border-top: 0;
+                margin-top: 0;
+                padding-top: 0;
+            }
+}
     .basket-summary-items {
       background: transparent;
-      img {
-        max-width:130px!important;
-      }
-      @media @mobile {
+      @media @tablet {
+                img {
+            max-width:100px!important;
+        }
+              @media @mobile {
+                img {
+            max-width:80px!important;
+        }
         display: table-row-group;
         + tr {
           display: block;
         }
       }
+  }
       &:last-child {
         td {
           padding-bottom: 25px;
@@ -1656,25 +1744,36 @@ select::-ms-expand {
       .basket-summary-pricepu, .basket-summary-quantity, .basket-summary-amount {
         font-size: @font-swatch5-font-size;
         line-height: @font-swatch5-line-height;
+        label {
+          display:block;
+        }
       }
       .basket-summary-pricepu {
         display: block;
       }
+      .basket-summary-quantity {
+        margin-top: 4px;
+      }
       .basket-summary-quantity, .basket-summary-quantitybtn {
         display: inline-block;
+        label {
+          display:block;
+        }
         span {
-          background-color: darken(@color-swatch1,3%);
-      padding: 2px 25px 6px;
-      margin: -6px;
-      @media @mobile {
-        padding: 2px 11px 6px;
-      }
+          padding: 5px 25px 6px;
+          margin: 0;
+          position: relative;
+          top: -2px;
         }
         button {
-            padding:8px 10px;
-      border:0;
-      color:@color-swatch1;
-      background-color:@color-swatch4;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          box-shadow: none;
+          border:0;
+          color:@color-swatch1;
+          background-color:@color-swatch4;
+          margin: 0;
       &:hover {
         background-color:lighten(@color-swatch4,10%);
       }
@@ -1690,9 +1789,9 @@ select::-ms-expand {
       font-size: bkscale(@font-swatch5-font-size, 1.05);
       line-height: bkscale(@font-swatch5-font-size, 1.1);
       margin-top: 25px;
-      border:1px solid @color-swatch7;
+      border:2px solid @color-swatch7;
       padding:20px;
-      border-radius:3px;
+      font-weight:700;
     }
   }
 }
@@ -1703,6 +1802,23 @@ select::-ms-expand {
   line-height: 45px;
   height: 45px;
   font-weight: @font-swatch7-font-weight;
+}
+
+.basket-summary-empty-cta.btn {
+  background-color:@color-swatch3;
+  text-decoration: none;
+  &:hover {
+    background-color:@color-swatch7;
+  }
+}
+
+.basket-summary-legal-links {
+    padding-top:10px;
+    list-style: none;
+    padding-left:0;
+    &:hover {
+        text-decoration:underline!important;
+    }
 }
 
 /* ===============================
