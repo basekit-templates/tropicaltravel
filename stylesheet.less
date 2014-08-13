@@ -814,13 +814,15 @@ div.twitter-profile-pic {
     margin: 0;
     background-color: @color-swatch3;
     padding: 20px;
+    @media @mobile {
+      padding:10px;
+    }
 }
 
 .widget.twitter ul li {
     border-bottom: none;
     list-style: none;
     font-family: @font-swatch5-font-family;
-    font-size: .6em;
     color: @font-swatch5-color;
     padding-bottom: 30px;
 }
@@ -836,6 +838,9 @@ div.twitter-profile-pic {
 .widget.twitter .twitter-profile-pic {
     float: left;
     margin-right: 20px;
+    @media @tablet {
+      margin-right:10px;
+    }
 }
 
 .widget.twitter .twitter-profile-pic a {
@@ -1091,7 +1096,6 @@ div.twitter-profile-pic {
     padding: 0px;
     font-size: 1em;
     font-family: @font-swatch7-font-family;
-    float:right;
 }
 
 .widget.socialicons a,
@@ -1119,6 +1123,8 @@ div.twitter-profile-pic {
     background-color: @color-swatch7;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
+    text-indent: 9999px;
 }
 
 .widget.socialicons span a:hover,
@@ -1130,6 +1136,12 @@ div.twitter-profile-pic {
 .widget.profile span, .widget.profile a, .widget.profile p {
   float:none;
 }
+
+.widget.profile .bk-profile-address p {
+  float: left;
+  padding-right: 10px;
+}
+
 
 /* ===============================
    6. MENU
@@ -1156,8 +1168,8 @@ div.twitter-profile-pic {
     }
 
     .main {
-        width: 90%;
-        padding-top:30px;
+        width: 100%;
+        padding-top:20px;
         margin: 0 auto;
             @media only screen and (max-width: 1084px) {
                 width: 93%;
@@ -1496,6 +1508,10 @@ div.twitter-profile-pic {
   }
 }
 
+.blog-post-sharing {
+  margin-top:10px
+}
+
 /* ===============================
    Ecom
    =============================== */
@@ -1821,6 +1837,19 @@ select::-ms-expand {
     }
 }
 
+.btn.ecom-product-go-to-checkout-btn {
+  background-color:@color-swatch4;
+  padding: 12px 10px;
+  &:hover {
+    background-color:lighten(@color-swatch4,10%);
+    text-decoration: none;
+  }
+}
+
+  .ecom-productlist-info {
+    text-align:center;
+  }
+
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
@@ -1920,6 +1949,14 @@ select::-ms-expand {
     top:-10px;
 }
 
+.widget.responsiveslideshow .title, .widget.responsiveslideshow .description {
+  padding:0;
+}
+
+.widget.responsiveslideshow .content-wrapper {
+    padding: 15px 15px 10px 15px;
+}
+
 /* ===============================
    PROFILE WIDGET
    =============================== */
@@ -1967,7 +2004,7 @@ input, textarea {
 
 .widget.profile .twitter a {
    font-family: @font-swatch5-font-family;
-   color: lighten(@font-swatch5-color,30%);
+   color: darken(@font-swatch5-color,30%);
    font-size:@font-swatch5-font-size;
    text-decoration: none;
 }
@@ -1993,7 +2030,7 @@ input, textarea {
 
 .widget.profile .twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch5-font-family;
-    color: lighten(@font-swatch5-color,30%);
+    color: darken(@font-swatch5-color,30%);
 }
 
 .widget.profile .twitter .twitter-content p {
@@ -2006,7 +2043,7 @@ input, textarea {
 }
 
 .widget.profile .twitter-content span a {
-  color: lighten(@font-swatch5-color,30%);
+  color: darken(@font-swatch5-color,30%);
 }
 
 footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a {
@@ -2179,35 +2216,33 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
 
 @media only screen and (max-width: 768px) { 
     
-    /* CUSTOM CSS */
 
     /* DEFAULT PAGE TYPE */
 
-.bk-pt-default header.bk-header {
-  padding: 0;
-  border-bottom:1px solid lighten(@color-swatch5, 20%);
-  padding: 20px 0px;
-}
+    .bk-pt-default header.bk-header {
+      padding: 0;
+      border-bottom:1px solid lighten(@color-swatch5, 20%);
+      padding: 20px 0px;
+    }
+    
+    .bk-pt-default .inner-bg {
+      border-top: none;
+    }
 
-.bk-pt-default .inner-bg {
-  border-top: none;
-}
-
-header.bk-header {
-  padding:20px 0px;
-}
-
+    header.bk-header {
+        padding:20px 0px 0px 0px;
+    }
 
     /* COMPANY HEADER */
 
     .widget.companyheader {
-        width: 100%;
+        width: 90%;
         display: block;
         margin: 0 auto;
     }
 
     .companyheader {
-      width:100%;
+      width:90%;
     }
 
     /* NAV */
@@ -2251,9 +2286,9 @@ header.bk-header {
 
   /* NAV */
 
-.widget.extendednavigation {
-  top:-40px;
-}
+  .widget.extendednavigation {
+    top:-50px;
+  }
   
  .widget .extendednavigation ul {
     width: 100%;
