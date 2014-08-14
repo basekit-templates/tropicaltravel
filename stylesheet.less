@@ -168,6 +168,51 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   padding: 10px;
 }
 
+.bk-pt-home {
+  .widget.feature + .bk-header {
+    background: transparent;
+    padding: 30px 0 30px 30px;
+    position: absolute;
+    top: 0;
+    width: 90%;
+    z-index: 9999;
+    @media @mobile {
+      left: 0;
+      width: 80%;
+    }
+  }
+  #main {
+    padding-top: 0;
+  }
+  .widget.extendednavigation a.pull {
+    @media @mobile {
+      top: 20px;
+    }
+  }
+}
+
+.bk-header {
+  background: lighten(@color-swatch6, 5%);
+  padding: 30px;
+  width: 100%;
+  @media @mobile {
+    padding: 25px 30px 15px;
+  }
+}
+
+.bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
+  background: lighten(@color-swatch6, 5%);
+  padding: 30px;
+  position: relative;
+  right: 0!important;
+  width: 100%;
+}
+
+
+.feature-image-block1.bk-tpl-hidden {
+  margin-bottom:0;
+}
+
 /* ===============================
    HEADER
    =============================== */
