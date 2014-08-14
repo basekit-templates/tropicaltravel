@@ -119,14 +119,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   position:relative;
 }
 
-.color-block {
-  display:table-row;
-  height:217px;
-  width: 100%;
-  border-bottom: 5px solid @color-swatch7;
-  padding:20px;
-}
-
 .color-block.yellow {
   background-color: @color-swatch7;
 }
@@ -135,10 +127,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   background-color: @color-swatch6;
   position:relative;
   top:20px;
-}
-
-.widget .extendednavigation ul li.folder .text:after {
-  display:none;
 }
 
 .color-block h1, .color-block h2, .color-block h3, .color-block h4, .color-block h5, .color-block p {
@@ -151,8 +139,33 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .color-block {
-display: table-cell;
-vertical-align: middle;
+  display: table-cell;
+}
+
+.color-block.yellow .widget.content {
+  padding: 0;
+  overflow: hidden;
+  background-color: @color-swatch7;
+  width: 1%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 217px;
+  border-bottom: 5px solid @color-swatch7;
+  padding: 10px;
+}
+
+.color-block.blue .widget.content {
+  padding: 0;
+  overflow: hidden;
+  background-color: @color-swatch4;
+  width: 1%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 217px;
+  border-bottom: 5px solid @color-swatch7;
+  padding: 10px;
 }
 
 /* ===============================
@@ -292,6 +305,10 @@ footer.bk-footer h4 {
 .widget.extendednavigation ul.align-right li
 {
   text-align: right;
+}
+
+.widget .extendednavigation ul li.folder .text:after {
+  display:none;
 }
 
 .widget.extendednavigation ul li {
