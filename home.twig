@@ -18,8 +18,12 @@
           {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
                 </div>
                 <div class="column columns-two-right">
-                    {{widget('content', 'textwidgetbox1', {content: '<p>Lorem ipsum dolor sit amet.</p>', lines: 'all'})|raw}}
-                    {{widget('content', 'textwidgetbox2', {content: '<p>Lorem ipsum dolor sit amet.</p>', lines: 'all'})|raw}}
+                    <div class="yellow">
+                        {{widget('content', 'textwidgetbox1', {content: '<p>Lorem ipsum dolor sit amet.</p>', lines: 'all'})|raw}}
+                    </div>
+                    <div class="blue">
+                        {{widget('content', 'textwidgetbox2', {content: '<p>Lorem ipsum dolor sit amet.</p>', lines: 'all'})|raw}}
+                    </div>
                 </div>
             </div>
         </div>

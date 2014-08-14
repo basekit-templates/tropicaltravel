@@ -107,31 +107,33 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .bk-pt-home {
-  .columns-two-right .widget.content {
-    color: @color-swatch1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 217px;
-    &:first-child {
-      margin-bottom: 20px;
+  .columns-two-right {
+    .blue .widget.content {
+      background-color: @color-swatch6;
+      border-bottom: 5px solid @color-swatch7;
+      p {
+       color: @color-swatch1;
+       font-size:@font-swatch7-font-size;
+       font-weight:@font-swatch7-font-weight;
+      }
     }
-  }
-  #textwidgetbox1 {
-    background-color: @color-swatch7;
-    p {
-      color: @color-swatch1;
-      font-size:@font-swatch7-font-size;
-      font-weight:@font-swatch7-font-weight;
+    .yellow .widget.content {
+      background-color: @color-swatch7;
+      p {
+        color: @color-swatch1;
+        font-size:@font-swatch7-font-size;
+        font-weight:@font-swatch7-font-weight;
+      }
     }
-  }
-  #textwidgetbox2 {
-   background-color: @color-swatch6;
-   border-bottom: 5px solid @color-swatch7;
-   p {
+    .widget.content {
       color: @color-swatch1;
-      font-size:@font-swatch7-font-size;
-      font-weight:@font-swatch7-font-weight;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 217px;
+      &:first-child {
+        margin-bottom: 20px;
+      }
     }
   }
 }
