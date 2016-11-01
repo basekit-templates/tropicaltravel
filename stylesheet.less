@@ -929,7 +929,8 @@ div.twitter-profile-pic {
     box-shadow: 0 0 3px lighten(@color-swatch5,50%);
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform button {
     padding: 16px 22px;
     margin: 0;
     border: none;
@@ -942,10 +943,15 @@ div.twitter-profile-pic {
     letter-spacing: 1px;
 }
   
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform button:hover {
   background-color: lighten(@color-swatch6,5%);
   color: @font-swatch7-color;
   cursor: pointer;
+}
+
+.advancedcontactform__select {
+  margin-bottom: 10px;
 }
 
 /* ===============================
