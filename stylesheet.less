@@ -2290,8 +2290,21 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
 
   /* NAV */
 
+  .companyheader:empty + .widget.extendednavigation {
+    margin: 0 0 30px;
+    top: 0;
+
+    ul {
+      padding-top: 30px;
+    }
+
+    ul li ul {
+      padding-top: 0;
+    }
+  }
+
   .widget.extendednavigation {
-    top:-50px;
+    top: -50px;
   }
   
  .widget .extendednavigation ul {
@@ -2359,6 +2372,11 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
 
   .widget.extendednavigation ul li.folder {
     border-radius: 0;
+    padding-right: 15px;
+
+    &:after {
+      right: 0;
+    }
   }
 
   .widget.extendednavigation ul li:hover > ul li:first-child {
@@ -2441,16 +2459,8 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
         padding-bottom:0;
     }
 
-    .widget.extendednavigation ul li.folder:after {
-        right: 10px;
-    }
-
     .widget .extendednavigation ul li {
       border-bottom:none;
-    }
-
-    .widget.extendednavigation ul li.folder:after {
-        right: -12px;
     }
 
      .widget.extendednavigation ul li, .widget.extendednavigation ul li.folder .text {
