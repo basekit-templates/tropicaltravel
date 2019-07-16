@@ -2,6 +2,7 @@
 	"name":"Tropical Travel",
 	"thumbnail":"tropicaltravel.png",
 	"screenshot":"tropicaltravel-screenshot.jpg",
+	"versionTenCompatible": 1,
 	"templateType":"standard",
     "pageTypes":["home"],
     "tags": {
