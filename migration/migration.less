@@ -22,6 +22,10 @@
     overflow: inherit;
 }
 
+.blue .widget.content {
+    margin-bottom: 0;
+}
+
 
 
 
@@ -62,10 +66,6 @@
 // Add spacing to the top of a widget when it follows a section
 #page-zones__main > .row + .widget:not(.row) {
     margin-top: @widget__spacing--other;
-    
-    @media @mobile {
-        margin-top: 20px;
-    }
 }
 
 
@@ -79,11 +79,6 @@
 #page-zones__main > .widget:not(.row) + .row {
     margin-bottom: @widget__spacing--other;
     margin-top: @widget__spacing--other;
-    
-    @media @mobile {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 
     &:not(:last-child) {
          margin-bottom: 0;
@@ -93,13 +88,8 @@
 
 // Empy zone spacing
 &.edit .main #page-zones__main:empty {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    
-    @media @mobile {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
