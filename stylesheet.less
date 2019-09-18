@@ -1816,7 +1816,9 @@ select::-ms-expand {
   }
 }
 
-.basket-summary-submit, .basket-summary-empty-cta {
+.basket-summary-continue-shopping,
+.basket-summary-submit, 
+.basket-summary-empty-cta {
   display: inline-block;
   padding: 0 12px;
   line-height: 45px;
@@ -2154,6 +2156,11 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
     margin-bottom: 20px;
 }
 
+.widget.signupform fieldset,
+.blog-search-form {
+  margin-bottom: 20px;
+}
+
 .widget.signupform fieldset {
     border: none;
     margin: 0;
@@ -2171,6 +2178,11 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
+.widget.signupform fieldset label,
+.blog-search-form label {
+    margin-bottom: 8px;
+}
+
 .widget.signupform fieldset input, .blog-search-form input {
     height: 48px;
     width: 50%;
@@ -2179,8 +2191,6 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 20px;
     float:left;
     padding: 0;
     border:0;
@@ -2193,7 +2203,7 @@ footer.bk-footer .widget.profile .twitter span, .widget.profile .twitter span a 
 
 .widget.signupform fieldset button.btn, .blog-search-submit-button {
     padding: 10px 22px;
-	margin: 6px 0px;
+	  margin: 0px;
     border: none;
     background-color: @font-swatch7-background-color;
     font-family: @font-swatch7-font-family;
